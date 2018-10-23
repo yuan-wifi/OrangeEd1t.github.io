@@ -1,2 +1,227 @@
-# 搭建hexo博客
+---
+title: 搭建Hexo博客(搭建+绑定域名+多终端同步)
+---
 
+# 搭建支持同步的Hexo博客
+
+## 准备工作
+
+* nodejs,npm和git
+* 一台能上网电脑(win10,macos或linux)
+* 一个域名(备案与否都可以)
+
+## 安装 
+
+* nodejs+npm
+
+  安装(http://nodejs.cn/download/)
+
+  验证nodejs安装完成
+
+  ![1540299351039](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540299351039.png)
+
+  验证npm安装完成
+
+  ![1540299452529](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540299452529.png)
+
+* git
+
+  [安装](https://git-scm.com/downloads)
+
+  验证git安装完成
+
+  ![1540301271333](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540301271333.png)
+
+## 搭建博客
+
+​	因为我们搭建的是据有多终端同步+域名访问功能的hexo博客，所以在一开始的时候，我们就应该做好一些准备工作，避免以后走弯路呢。
+
+### 方法
+
+ * 多终端同步：建立github仓库进行同步
+ * 域名访问：将域名与GitHub仓库绑定即可
+
+### 创建github仓库
+
+因为需要多终端同步，所以我们先在github上搭建一个空的仓库
+
+![1540306983824](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540306983824.png)
+
+**因为我已经创建了这个仓库，所以报错咯，这个不必在意的哟~**
+
+> 仓库名必须是你github的名字+.github.io哦！
+>
+> 例如：我的github的名字是 OrangeEd1t 那仓库名字一定就是 OrangeEd1t.github.io
+
+### 克隆仓库
+
+仓库创建完成后呢，我们就把我们的仓库 clone到本地来呢，打开Git Bash 输入
+
+``` bash
+git clone 
+```
+
+![1540307360822](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540307360822.png)
+
+然后我们进入到刚刚克隆好的仓库呢
+
+```bash
+cd OrangeEd1t.github.io/
+```
+
+接下来让我们看看这个文件夹里有什么呢
+
+```bash
+ll -a
+```
+
+![1540307757097](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540307757097.png)
+
+### 清空当前文件夹
+
+**注意：不是删除文件夹里所有东西，仅仅只是拷贝出来，文件夹中包含隐藏文件夹 .git 也需要一并拷贝出来**
+
+再次查看文件夹里有什么呢
+
+![1540307804430](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540307804430.png)
+
+### 创建并切换到hexo分支上
+
+**为了避免管理混乱，我将hexo的配置文件和hexo生成的html页面文件分别存放在了github的同一个仓库的两个分支中。其中，hexo的配置文件存放在hexo分支(默认分支)，hexo生成的html页面文件存放在master分支**
+
+在本地上使用`git branch`查看只有`master`一个分支。使用`git checkout -b hexo`创建`hexo`分支并将其作为默认分支。
+
+![1540308890583](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540308890583.png)
+
+创建并切换分支成功，下面我们进行hexo的安装。
+
+### hexo 安装
+
+首先，我们用npm进行全局安装 hexo
+
+```bash
+npm install hexo-cli -g
+```
+
+然后再在我们刚刚clone下来的的文件夹里输入 `hexo init` 进行初始化
+
+```bash
+hexo init
+```
+
+初始化完成后的文件夹目录
+
+![1540309493303](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540309493303.png)
+
+然后，我们依次执行
+
+``` bash
+npm install
+npm install hexo-deployer-git --save
+```
+
+执行完成后的文件夹目录
+
+![1540309611867](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540309611867.png)
+
+这时，我们将刚刚拷贝出去的文件再拷贝到当前文件夹中
+
+拷贝后的文件夹目录
+
+![1540309705579](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540309705579.png)
+
+接着，我们打开_config.yml 文件，并修改
+
+![1540309840145](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540309840145.png)
+
+> repository代表的是你博客生成的html文件存放仓库的ssh地址，建议输入ssh地址
+>
+> branch代表的是你博客生成的html文件存放的分支
+
+**注意：在配置所有的_config.yml文件时（包括theme中的），在所有的冒号:后边都要加一个空格，否则执行hexo命令会报错。**
+
+### 将hexo分支push到远程hexo分支上
+
+依次执行：
+
+``` bash
+git add .
+git commit -m "xxx"
+git push origin hexo
+hexo g -d
+```
+
+此时，github的远端仓库上将会有hexo和master两个分支、
+
+master分支：存放博客生成的html文件
+
+![1540310418808](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540310418808.png)
+
+hexo分支：存放博客的配置文件
+![1540310453971](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540310453971.png)
+
+接着，我们修改下仓库的默认分支，设置默认分支为hexo分支。
+
+![1540310573407](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540310573407.png)
+
+好啦，现在我们就可以通过自己的仓库名字访问博客了哦！
+
+### 博客日常上传流程
+
+在本地对博客进行修改（添加新博文、修改样式等等）后，即可通过下面的流程进行管理。 
+1. 依次执行：`git add .` 、`git commit -m "..."`、 `git push origin hexo`指令将改动推送到GitHub（此时当前分支应为hexo）； 
+2. 执行hexo g -d发布网站到master分支上。
+### 其他终端上传博客
+
+如果你想在另一个电脑上上传你自己的博客，那么你只需要如下做即可： 
+
+1. 从repo仓库上将项目代码clone到本地。 
+
+2. 切换到`hexo`分支。(若设置hexo为默认分支则跳过此步骤)
+
+```bash
+git checkout -b hexo origin/hexo
+```
+
+此时查看拉下来的repo有没有`.deploy_git`文件夹，如果有的话，删除并重新安装本地的hexo-deployer。
+
+```bash
+rm -r .deploy_git
+npm install hexo-deployer-git --save
+```
+
+搞定之后，即可按照日常上传流程上传更新就OK啦~
+
+## 绑定域名
+
+### 域名购买
+
+首先，购买一个域名(我是在良心云上购买的域名)，购买的过程就不赘述了，跟淘宝买东西一样呢。
+
+### 域名解析
+
+域名购买好之后进入控制台->云解析 点击【解析】
+
+![1540311028177](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540311028177.png)
+
+![1540311154664](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540311154664.png)
+
+#### ip地址获取
+
+![1540311307002](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540311307002.png)
+
+红框里就是ip地址啦
+
+### 设置CNAME
+
+在你博客的项目下，`source` 文件夹下面创建 CNAME 文件（没有后缀名的），在里面写上购买的域名。比如：
+
+![1540311481069](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540311481069.png)
+
+在 github 上面，打开 项目的（Settings）设置，然后在 `GitHub Pages`的 `Custom domain`设置里填上购买的域名。比如：
+
+
+
+![1540311607064](C:\Users\Sen\AppData\Roaming\Typora\typora-user-images\1540311607064.png)
+
+然后就大功告成啦，现在你的博客已经支持多终端同步和域名访问啦！
