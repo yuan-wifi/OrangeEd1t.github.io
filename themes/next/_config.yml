@@ -60,7 +60,7 @@ rss:
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  since: 2018
+  #since: 2015
 
   # Icon between year and copyright info.
   icon:
@@ -119,8 +119,8 @@ index_with_subtitle: false
 menu:
   home: / || home
   #about: /about/ || user
-  tags: /tags/ || tags
-  categories: /categories/ || th
+  #tags: /tags/ || tags
+  #categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
@@ -144,9 +144,6 @@ scheme: Muse
 
 # ---------------------------------------------------------------
 # Sidebar Settings
-sidebar:
-    position: left
-    #position: right
 # ---------------------------------------------------------------
 
 # Posts / Categories / Tags in sidebar.
@@ -197,7 +194,7 @@ avatar:
   # in theme directory(source/images): /images/avatar.gif
   # in site  directory(source/uploads): /uploads/avatar.gif
   # You can also use other linking images.
-  url: /images/avatar.gif
+  url: #/images/avatar.gif
   # If true, the avatar would be dispalyed in circle.
   rounded: false
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
@@ -233,10 +230,10 @@ sidebar:
   #width: 300
 
   # Sidebar Display, available value (only for Muse | Mist):
-  #  - post    默认行为，在文章页面（拥有目录列表）时显示
-  #  - always  在所有页面中都显示
-  #  - hide    在所有页面中都隐藏（可以手动展开）
-  #  - remove  完全移除
+  #  - post    expand on posts automatically. Default.
+  #  - always  expand for all pages automatically
+  #  - hide    expand only when click on the sidebar toggle icon.
+  #  - remove  Totally remove sidebar including sidebar toggle.
   display: post
   #display: always
   #display: hide
@@ -503,7 +500,7 @@ valine:
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # comment box placeholder
-  avatar: # gravatar style
+  avatar: mm # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
   visitor: false # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
