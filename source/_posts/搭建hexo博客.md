@@ -14,7 +14,7 @@ title: 搭建Hexo博客(搭建+绑定域名+多终端同步)
 
 * nodejs+npm
 
-  安装(http://nodejs.cn/download/)
+  [安装](http://nodejs.cn/download/)
 
   验证nodejs安装完成
 
