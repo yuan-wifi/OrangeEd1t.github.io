@@ -318,7 +318,7 @@ wechat_subscriber:
   description: 我很懒，不会推送什么东西...
 
 # Reward
-reward_comment: Donate comment here
+reward_comment: 只要你良心能过得去，打不打赏都无所谓...
 wechatpay: /images/wechatpay.jpg
 alipay: /images/alipay.jpg
 #bitcoin: /images/bitcoin.png
