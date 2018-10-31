@@ -189,7 +189,7 @@ sidebar:
 ```bash
 social_icons:
   enable: true
-  icons_only: false
+  icons_only: false #只显示图标
   transition: false
   GitHub: github
   E-Mail: envelope
