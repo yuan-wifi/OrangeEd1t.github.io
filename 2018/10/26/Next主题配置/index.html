@@ -122,7 +122,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/10/26/Next主题配置/1540974064306.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/26/Next主题配置/1540974446321.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/26/Next主题配置/1540974795661.png">
-<meta property="og:updated_time" content="2018-10-31T08:52:16.672Z">
+<meta property="og:updated_time" content="2018-10-31T09:25:47.608Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Next主题配置">
 <meta name="twitter:description" content="​    在搭建Hexo博客(搭建+绑定域名+多终端同步)中我们学会了如何搭建一个Hexo博客。这篇，我们主要讲解Hexo的Next主题配置(别问为什么是这个主题，大家都在用….)，不废话了，进入正题。 准备工作安装主题我选择的Next，安装主题仅需一行代码，在你博客的根目录下打开Git Bash 输入： 1git clone https://github.com/theme-next/hexo-">
@@ -243,22 +243,6 @@
         
         
           
-          <li class="menu-item menu-item-tags">
-    <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
@@ -371,7 +355,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-31 16:52:16" itemprop="dateModified" datetime="2018-10-31T16:52:16+08:00">2018-10-31</time>
+                <time title="修改时间：2018-10-31 17:25:47" itemprop="dateModified" datetime="2018-10-31T17:25:47+08:00">2018-10-31</time>
               
             
           </span>
@@ -475,7 +459,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Social Links.</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimeter is the target permalink.</span></span><br><span class="line"><span class="comment"># Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.</span></span><br><span class="line"><span class="comment">#social:</span></span><br><span class="line">  <span class="comment">#GitHub: https://github.com/yourname || github</span></span><br><span class="line">  <span class="comment">#E-Mail: mailto:yourname@gmail.com || envelope</span></span><br><span class="line">  <span class="comment">#Google: https://plus.google.com/yourname || google</span></span><br><span class="line">  <span class="comment">#Twitter: https://twitter.com/yourname || twitter</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || facebook</span></span><br><span class="line">  <span class="comment">#VK Group: https://vk.com/yourname || vk</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || youtube</span></span><br><span class="line">  <span class="comment">#Instagram: https://www.instagram.com/yourname/ || instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || skype</span></span><br></pre></td></tr></table></figure>
 <p><img src="/2018/10/26/Next主题配置/1540974064306.png" alt="1540974064306"></p>
 <h4 id="第二步：设置链接图标"><a href="#第二步：设置链接图标" class="headerlink" title="第二步：设置链接图标"></a>第二步：设置链接图标</h4><p>设定链接的图标，对应的字段是 <code>social_icons</code>。其键值格式是 匹配键:<code>Font Awesome</code>图标名称， 匹配键 与上一步所配置的链接的 显示文本 相同（大小写严格匹配），图标名称 是<code>Font Awesome</code>图标的名字（不必带 fa- 前缀）。 <code>enable</code> 选项用于控制是否显示图标，你可以设置成 false 来去掉图标。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">social_icons:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  icons_only: <span class="literal">false</span></span><br><span class="line">  transition: <span class="literal">false</span></span><br><span class="line">  GitHub: github</span><br><span class="line">  E-Mail: envelope</span><br><span class="line">  Google: google</span><br><span class="line">  Twitter: twitter</span><br><span class="line">  Instagram: instagram</span><br><span class="line">  <span class="comment"># Dependencies: exturl: true in Tags Settings section below.</span></span><br><span class="line">  <span class="comment"># To encrypt links above use https://www.base64encode.org</span></span><br><span class="line">  <span class="comment"># Example encoded link: `GitHub: aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQ= || github`</span></span><br><span class="line">  exturl: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">social_icons:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  icons_only: <span class="literal">false</span> <span class="comment">#只显示图标</span></span><br><span class="line">  transition: <span class="literal">false</span></span><br><span class="line">  GitHub: github</span><br><span class="line">  E-Mail: envelope</span><br><span class="line">  Google: google</span><br><span class="line">  Twitter: twitter</span><br><span class="line">  Instagram: instagram</span><br><span class="line">  <span class="comment"># Dependencies: exturl: true in Tags Settings section below.</span></span><br><span class="line">  <span class="comment"># To encrypt links above use https://www.base64encode.org</span></span><br><span class="line">  <span class="comment"># Example encoded link: `GitHub: aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQ= || github`</span></span><br><span class="line">  exturl: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <p><img src="/2018/10/26/Next主题配置/1540974446321.png" alt="1540974446321"></p>
 <h3 id="开启打赏功能"><a href="#开启打赏功能" class="headerlink" title="开启打赏功能"></a>开启打赏功能</h3><p>付费阅读时代越来越近，特此增加了打赏功能，支持微信打赏和支付宝打赏。 只需要主题配置文件，搜索<code>Reward</code>字段</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Reward</span></span><br><span class="line"><span class="comment">#reward_comment: Donate comment here</span></span><br><span class="line">wechatpay: <span class="comment">#微信收款二维码图片地址</span></span><br><span class="line">alipay: <span class="comment">#支付宝收款二维码图片地址</span></span><br><span class="line">bitcoin: <span class="comment">#比特币收款二维码图片地址</span></span><br></pre></td></tr></table></figure>
@@ -678,27 +662,27 @@
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/orangeed1t" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/orangeed1t" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i></a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:leedsym@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  <a href="mailto:leedsym@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i></a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://plus.google.com/yourname" target="_blank" title="Google"><i class="fa fa-fw fa-google"></i>Google</a>
+                  <a href="https://plus.google.com/yourname" target="_blank" title="Google"><i class="fa fa-fw fa-google"></i></a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://twitter.com/orangeed1t" target="_blank" title="Twitter"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  <a href="https://twitter.com/orangeed1t" target="_blank" title="Twitter"><i class="fa fa-fw fa-twitter"></i></a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.instagram.com/FaZe_OrangeEd1t/" target="_blank" title="Instagram"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                  <a href="https://www.instagram.com/FaZe_OrangeEd1t/" target="_blank" title="Instagram"><i class="fa fa-fw fa-instagram"></i></a>
                   
                 </span>
               
