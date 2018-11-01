@@ -157,7 +157,7 @@ site_state: true
 social:
   GitHub: https://github.com/orangeed1t || github
   E-Mail: mailto:leedsym@gmail.com || envelope
-  Google: https://plus.google.com/yourname || google
+  #Google: https://plus.google.com/yourname || google
   Twitter: https://twitter.com/orangeed1t || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
   #VK Group: https://vk.com/yourname || vk
@@ -172,7 +172,6 @@ social_icons:
   transition: false
   GitHub: github
   E-Mail: envelope
-  Google: google
   Twitter: twitter
   Instagram: instagram
   # Dependencies: exturl: true in Tags Settings section below.
